@@ -45,4 +45,14 @@ router.get("/find/:userId", vertifyTknAuth, async(req,res)=>{
     }
 })
 
+router.get('/', vertifyTknAdmin, async(req,res)=>{
+    try{
+        const carts = await Cart.find()
+        res.status(200).json(carts)
+    }
+    catch(err){
+        res.status(500).json(err)
+    }
+})
+
 module.exports = router
