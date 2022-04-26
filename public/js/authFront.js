@@ -11,7 +11,7 @@ function getCookie(cookieName) {
     if(cookie[cookieName]){
         loginA.style.display = 'none'
         registerA.style.display = 'none'
-        usernameCookie.innerHTML = cookie[cookieName];
+        usernameCookie.innerHTML = "@" + cookie[cookieName];
     }else{
         console.dir('irena')
     }

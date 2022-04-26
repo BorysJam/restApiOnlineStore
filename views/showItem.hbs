@@ -12,15 +12,23 @@
     <div class="mainItem">
         <div class="leftSide"><img src="{{product.img}}" alt=""></div>
         <div class="rightSide">
-            <div class="rightDesc">{{product.desc}}</div>
-            <div class="rightTitle">{{product.title}}</div>
-            <div class="rightPrice">{{product.price}} PLN</div>
-            <div class="rightColor">Color: {{product.color}}</div>
-            <div class="rightSize">Size: {{product.size}}</div>
-            <div class="rightBtn"><a><button><i class="fa-solid fa-cart-shopping"></i>Add to cart</button></a></div>
-            <div class="rightCategories">Categories: {{product.categories}}</div>   
-            <div class="rightProductId">Product number: {{product._id}}</div>
+            <div class="rightCont">
+                <div class="rightDesc">{{product.desc}}</div>
+                <div class="rightTitle">{{product.title}}</div>
+                <div class="rightPrice">{{product.price}} PLN</div>
+                <div class="rightColor">Color: {{product.color}}</div>
+                <div class="rightSize">Size: {{product.size}}</div>
+                <div class="rightBtn">
+                    <form action="/api/carts/" method="post">
+                        <input type="hidden" value="{{product._id}}" name="productId">
+                        <button type="submit" id="addToCart"><i class="fa-solid fa-cart-shopping"></i>Add to cart</button>
+                    </form>
+                </div>
+                <div class="rightCategories">Categories: {{product.categories}}</div>   
+                <div class="rightProductId">Product number: {{product._id}}</div>
+            </div>
         </div>
     </div>
+    <script src="/js/authFront.js"></script>
 </body>
 </html>

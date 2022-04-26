@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/9d04a6002a.js" crossorigin="anonymous"></script>
-    <title>My Store</title>
+    <title>KickSeller - Online Store with hype shoes</title>
 </head>
 <body>
     {{> header}}
     
     <h1 id="ourH1">Our products</h1>
-    <select name="" id="" onchange="filterProduct(this)">
-        <option value="">- Brand</option>
-        <option value="adidas">Adidas</option>
-        <option value="nike">Nike</option>
-    </select>
+    <div class="filterBar">
+        <select name="" id="" onchange="filterProduct(this)">
+            <option value="">- Brand</option>
+            <option value="">All</option>
+            <option value="adidas">Adidas</option>
+            <option value="nike">Nike</option>
+        </select>
+    </div>
     <div class="productItem">
         {{#each products}}
         <div class="productItemContainer">
