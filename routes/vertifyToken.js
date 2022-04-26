@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken')
 
 const vertifyTkn = (req,res,next) => {
-    const authHeader = req.headers.token;
+    const authHeader = req.cookies.token;
     if(authHeader){
         const token = authHeader.split(" ")[1];
         jwt.verify(token, process.env.PASS_SECRET_KEY, (err,user)=>{

@@ -1,14 +1,16 @@
-const Product = require('../models/Product')
+const Cart = require('../models/Cart')
 const { vertifyTkn, vertifyTknAuth, vertifyTknAdmin } = require('./vertifyToken')
 const router = require('express').Router()
 
 //create
 
 router.post('/', vertifyTkn, async(req,res)=>{
-    const newCart = new Cart(req.body)
+    const userD = req.cookies.userId
+    const productId = req.body.productId
+    const newCart = new Cart(userD,productId)
     try{
         const savedCart = await newCart.save()
-        res.status(200).json(savedCart)
+        res.status(200).render("cart.hbs",{savedCart: savedCart})
     }catch(err){
         res.status(500).json(err)
     }

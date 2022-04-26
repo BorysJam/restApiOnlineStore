@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>{{others._id}}</p>
+    <span id="bearer">bearer {{others.token}}</span>
+    <form action="" method="POST">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="">
+        <label for="username">Password</label>
+        <input type="password" name="password" id="">
+        <button type="submit">Login</button>
+    </form>
+</body>
+    <script>
+        const bearer = document.querySelector('#bearer').innerHTML
+        const usrid = document.querySelector('#userId')
+        const token = localStorage.setItem('bearer', bearer)
+        const userId = localStorage.setItem('userId', usrid)
+        
+        
+    </script>
+</html>
