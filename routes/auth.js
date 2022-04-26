@@ -51,7 +51,9 @@ router.post('/login', async(req,res)=>{
             const { passwordFinal, ...others } = user._doc;
             res.cookie('userId', user.id)
             res.cookie('token', `bearer ${token}`)
-        res.status(200).render("login.hbs",{others:{...others, token}})
+            res.cookie('userName', user.username)
+        //res.status(200).render("login.hbs",{others:{...others, token}})
+        res.status(200).render('success.hbs')
     }catch(err){
         res.status(500).json(err)
     }

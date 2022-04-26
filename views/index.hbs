@@ -12,6 +12,11 @@
     {{> header}}
     
     <h1 id="ourH1">Our products</h1>
+    <select name="" id="" onchange="filterProduct(this)">
+        <option value="">- Brand</option>
+        <option value="adidas">Adidas</option>
+        <option value="nike">Nike</option>
+    </select>
     <div class="productItem">
         {{#each products}}
         <div class="productItemContainer">
@@ -29,5 +34,7 @@
         
         {{/each}}
     </div>
+    <script src="/js/authFront.js"></script>
+    <script src="/js/filterProduct.js"></script>
 </body>
 </html>
