@@ -36,10 +36,18 @@ app.use('/api/carts', cartRoute)
 app.use('/api/orders', orderRoute)
 app.use('/', productMain)
 
-// app.get('/',async(req,res)=>{
-//     console.log(await productMain)
-//     res.render('index.hbs')
-// })
+app.get('/about',(req,res)=>{
+    res.render('about.hbs')
+})
+app.get('/shoes',(req,res)=>{
+    res.render('shoes.hbs')
+})
+app.get('/clothes',(req,res)=>{
+    res.render('clothes.hbs')
+})
+app.get('/contact',(req,res)=>{
+    res.render('contact.hbs')
+})
 
 app.listen(process.env.PORT || 3000, ()=>{
     console.log('listening to port 3000')

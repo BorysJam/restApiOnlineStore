@@ -9,17 +9,47 @@ header{
     justify-content: center;
     align-items: center;
     height: 95px;
-    background: #333;
+    background: #17181a;
 }
 header a{
-    padding: 0 3.8vh;
+    padding: 0 4vh;
     color:whitesmoke;
     font-size: 20px;
     text-decoration: none;
 }
-#ourH1{
-    color:#333;
+header a:hover, footer .links:hover{
+    color:#9a222b;
+}
+footer{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    background: #17181a;
+    justify-content: center;
+}
+footer .links{
+    display: flex;
+    padding-right: 5vh;
+}
+.links a{
+    color:whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 2vh;
+}
+.cardProvider{
+    width: max-content;    
+}
+.cardProvider img{
+    width: 20vw;
+}
+.ourH1{
+    color:#17181a;
     text-align: center;
+    background: #9a222b;
+    font-size: 26px;
+    margin: 0;
+    padding:18px 0;
 }
 .filterBar{
     position: relative;
@@ -30,6 +60,7 @@ header a{
     margin-bottom: 20px;
 }
 .filterBar select{
+    background: white;
     position: relative;
     left: 50vh;
     padding: 8px 20px;
@@ -134,7 +165,7 @@ header a{
 }
 #addToCart{
     padding:14px 20px;
-    background: #333;
+    background: #9a222b;
     color: whitesmoke;
     border-radius: 6px;
     outline: none;

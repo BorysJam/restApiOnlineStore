@@ -11,7 +11,7 @@
 <body>
     {{> header}}
     
-    <h1 id="ourH1">Our products</h1>
+    <h1 class="ourH1">Our products</h1>
     <div class="filterBar">
         <select name="" id="" onchange="filterProduct(this)">
             <option value="">- Brand</option>
@@ -42,6 +42,7 @@
         </div>
         {{/each}}
     </div>
+    {{>footer}}
     <script src="/js/authFront.js"></script>
     <script src="/js/filterProduct.js"></script>
 </body>
