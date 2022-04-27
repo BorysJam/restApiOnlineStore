@@ -19,7 +19,15 @@
             <option value="adidas">Adidas</option>
             <option value="nike">Nike</option>
         </select>
+        <select name="" id="" onchange="priceBy(this)">
+            <option value="/">- Sort by</option>
+            <option value="low">low</option>
+            <option value="high">high</option>
+        </select>
+  
     </div>
+
+        
     <div class="productItem">
         {{#each products}}
         <div class="productItemContainer">
@@ -29,12 +37,9 @@
             <div class="brand">{{this.desc}}</div>
             <div class="title">{{this.title}}</div>
             <div class="price">{{this.price}} PLN</div>
-            <div class="size">Size: {{this.size}}</div>
-           
+            <div class="size">Size: {{this.size}}</div>      
             </a>
         </div>
-        
-        
         {{/each}}
     </div>
     <script src="/js/authFront.js"></script>

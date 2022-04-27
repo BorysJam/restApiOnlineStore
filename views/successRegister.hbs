@@ -9,11 +9,12 @@
 </head>
 <body>
     {{>header}}
-    <h1>Successfull login attempt you will be redirected in 2 seconds</h1>
+    <h1>Successfull registration attempt {{savedUser}}</h1>
+    <h2>You will be redirected in 10 seconds</h2>
     <script>
         setTimeout(()=>{
             window.location.href = '/'
-        },2000)
+        },10000)
     </script>
 </body>
 </html>

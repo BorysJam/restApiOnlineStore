@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9d04a6002a.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>KickSeller - {{product.title}}</title>
 </head>
 <body>
     {{>header}}
@@ -28,6 +28,24 @@
                 <div class="rightProductId">Product number: {{product._id}}</div>
             </div>
         </div>
+    </div>
+    <div class="similar">
+        <h1>Similar products:</h1>
+        <!--
+        <div class="productItem">
+        {{#each products}}
+        <div class="productItemContainer">
+            <a class="productLink" href="/api/products/find/{{this.id}}">
+          
+            <div class="image"><img src="{{this.img}}" alt=""></div>
+            <div class="brand">{{this.desc}}</div>
+            <div class="title">{{this.title}}</div>
+            <div class="price">{{this.price}} PLN</div>
+            <div class="size">Size: {{this.size}}</div>      
+            </a>
+        </div>
+        {{/each}}
+    </div> -->
     </div>
     <script src="/js/authFront.js"></script>
 </body>

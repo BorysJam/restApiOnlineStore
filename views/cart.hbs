@@ -5,21 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9d04a6002a.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>KickSeller -Shopping Cart</title>
 </head>
 <body>
     {{>header}}
-    {{#each savedCart}}
-    <div class="cartItem">
-        <div class="itmImg">
-            <img src="{{img}}" alt="">
+    <div class="cartContainer">
+        {{#each savedCart}}
+        <div class="cartItem">
+            <div class="itmImg">
+                <img src="{{img}}" alt="">
+            </div>
+            <div class="itmTxt">
+                 <div class="topCont">
+                    <div class="itmTitle">{{title}}</div>
+                    <div class="itmPrice"><span class="cena">{{price}}</span>,00 PLN</div>
+                </div>
+                <div class="midCont">
+                    <div class="itmCategory">Brand: {{desc}}</div>
+                </div>
+                <div class="quantity">
+                    <span>Amount:</span>
+                    <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+            </div> 
         </div>
-        <div class="itmTitle">{{title}}</div>
-        <div class="itmPrice">{{price}}</div>
-    </div>
     {{/each}}
+     <div class="order"><button>Order</button></div>
+    </div>
+   
+    
         
     <h1>{{added}}</h1>
     <script src="/js/authFront.js"></script>
+    <script src="/js/total.js"></script>
 </body>
 </html>

@@ -6,13 +6,9 @@ const router = require('express').Router()
 //create
 
 router.post('/', vertifyTkn, async(req,res)=>{
-    console.log('hello')
     const userD = req.cookies.userId
     const productId = req.body.productId
-    console.log(userD + "     " + productId)
-
     const newCart = new Cart({userId: userD, productId: productId, quantity:1})
-    console.log(newCart)
     try{
         const savedCart = await newCart.save()
         res.status(200).render("cart.hbs",{savedCart: savedCart, added:'Chosen item has been added to cart'})
@@ -67,19 +63,13 @@ router.get('/mycart', vertifyTkn, async(req,res)=>{
     try{ 
         const myCart = await Cart.find({userId: userD})
         let products = []
-        
-        // await myCart.forEach(async(e)=>{
-        //     let productID = e.productId
-        //     let product = await Product.findById(productID)
-        //     console.log(product.title)
-        //     products = [...product.title]
-        // })
        for(const el of myCart){
            let product = await Product.findById(el.productId)
            let title = product.title
            let img = product.img
            let price = product.price
-           products.push({title: title, img:img, price:price})
+           let desc = product.desc
+           products.push({title: title,desc:desc, img:img, price:price})
            
        }
         res.render('cart.hbs', {savedCart: products})

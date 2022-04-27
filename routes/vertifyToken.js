@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken')
 
 const vertifyTkn = (req,res,next) => {
+    //const authHeader = req.headers.token
+    // cookie token is working in client, headers is used on postman
     const authHeader = req.cookies.token;
     if(authHeader){
         const token = authHeader.split(" ")[1];
