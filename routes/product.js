@@ -37,8 +37,10 @@ router.delete(":/id", vertifyTknAdmin, async(req,res)=>{
 
 router.get("/find/:id", async(req,res)=>{
     try{
+        
+        const products = await Product.find().limit(3).skip(2)
         const product = await Product.findById(req.params.id)
-        res.status(200).render('showItem.hbs', {product:product})
+        res.status(200).render('showItem.hbs', {product:product, products:products})
     }
     catch(err){
         res.status(500).json(err)

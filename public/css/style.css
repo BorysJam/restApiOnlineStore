@@ -105,6 +105,9 @@ footer .links{
     align-items: center;
     height: 35vh;
 }
+.image:hover{
+    opacity: .8;
+}
 .image img{
     width: 30vh;
 }
@@ -241,4 +244,56 @@ footer .links{
     font-weight: 600;
     color:whitesmoke;
     float: right;
+}
+.adminContainer{
+    height: 80vh;
+}
+.adminController{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: #9a222b;
+    width: 150px;
+    height: 80vh;
+}
+.adminBtn{
+    margin: 0 0 20px 0;
+}
+.adminBtn button{
+    border-radius: 5px;
+    border: 0;
+    width: 140px;
+    padding: 10px 0;
+    font-size: 16px;
+}
+.adminBtn button:hover{
+    cursor: pointer;
+    opacity: .9;
+}
+.adminAddProductForm{
+    padding: 50px 0;
+}
+.adminAddProductForm form{
+    margin: 0 auto;
+    display: flex;
+    border: 3px solid #333;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    padding: 20px 20px 30px 20px;
+    border-radius: 5px;
+}
+.adminAddProductForm form input{
+    padding:10px 5px;
+    width: 50vh;
+    margin: 6px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(51, 51, 51, 0.142);
+    font-size: 18px;
+}
+.adminAddProductForm h1{
+    font-size: 22px;
 }

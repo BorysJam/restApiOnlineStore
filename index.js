@@ -24,6 +24,7 @@ const productRoute = require('./routes/product')
 const cartRoute = require('./routes/cart')
 const orderRoute = require('./routes/order')
 const productMain = require('./routes/productmain')
+const adminPanel = require('./routes/admin')
 
 mongoose.connect(`mongodb+srv://bj9898:${process.env.MONGO_URI}@cluster0.jz4ra.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`).then(()=>{
     console.log("Database conntected success")
@@ -35,6 +36,7 @@ app.use('/api/products', productRoute)
 app.use('/api/carts', cartRoute)
 app.use('/api/orders', orderRoute)
 app.use('/', productMain)
+app.use('/api/admin',adminPanel)
 
 app.get('/about',(req,res)=>{
     res.render('about.hbs')

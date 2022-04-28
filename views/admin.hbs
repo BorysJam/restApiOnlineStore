@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9d04a6002a.js" crossorigin="anonymous"></script>
+    <title>Admin Panel</title>
+</head>
+<body>
+    {{>header}}
+    <h1 class="ourH1">Admin Panel</h1>
+    <div class="adminContainer">
+        <div class="adminController">
+            <div class="adminBtn"><button>Add new product</button></div>
+            <div class="adminBtn"><button>Update product</button></div>
+            <div class="adminBtn"><button>Delete product</button></div>
+            <div class="adminBtn"><button>All users</button></div>
+            <div class="adminBtn"><button>Check stats</button></div>
+            <div class="adminBtn"><button>Find user by id</button></div>
+            <div class="adminBtn"><button>Check income</button></div>
+        </div>
+        <div class="adminAddProductForm">
+
+            <form action="/api/product" method="post">
+                <h1>Add new product</h1>
+                <input type="text" name="title" placeholder="Model or title">
+                <input type="text" name="desc" placeholder="Description or brand">
+                <input type="text" name="img" placeholder="Image link">
+                <input type="text" name="categories" placeholder="Category">
+                <input type="text" name="size" placeholder="Size of the product">
+                <input type="text" name="color" placeholder="Color of product">
+                <input type="number" name="price" placeholder="Price of product">
+                <button type="submit">Add product</button>
+            </form>
+        </div>
+    </div>
+    {{>footer}}    
+    <script src="/js/authFront.js"></script>
+</body>
+</html>
